@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Quest: Responsividade com Tag Picture</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <p>A <strong>Tag</strong> <strong>picture</strong> juntamente com as <strong>Tags</strong>: <strong>img</strong> e <strong>source</strong>, nos permitem manipular a responsividade de imagens no próprio <strong>HTML</strong>. Tornando fácil a manipulação dos tamanhos das imagens, para que o usuário tenha a melhor experiência possível.</p>
+    <h1>Picture com Mobile First</h1>
+    <picture>
+      <source
+        srcset="https://via.placeholder.com/1200"
+        media="(min-width: 1024px)"
+      />
+
+      <source
+        media="(min-width: 768px)"
+        srcset="https://via.placeholder.com/850"
+      />
+
+      <source
+        media="(min-width: 465px)"
+        srcset="https://via.placeholder.com/500"
+      />
+
+      <img src="https://via.placeholder.com/300x300" alt="" />
+    </picture>
+
+    <h1>Picture com Desktop First</h1>
+    <picture>
+      <source
+        srcset="https://via.placeholder.com/250"
+        media="(max-width: 375px)"
+      />
+
+      <source
+        srcset="https://via.placeholder.com/350"
+        media="(max-width: 425px)"
+      />
+
+      <source
+        srcset="https://via.placeholder.com/500"
+        media="(max-width: 768px)"
+      />
+
+      <img src="https://via.placeholder.com/1200x1200" alt="" />
+    </picture>
+  </body>
+</html>
